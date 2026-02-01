@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS67 Web Evidence Hub | Sanjana</title>
+  <meta name="description" content="CS67 Web Technologies coursework portfolio with search and accordion interaction." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap bar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">S</div>
+        <div class="brand-text">
+          <div class="brand-title">Sanjana</div>
+          <div class="brand-sub">CS67 Web Evidence Hub — Interactive Portfolio</div>
+        </div>
+      </div>
+
+      <button id="menuBtn" class="menuBtn" type="button" aria-controls="nav" aria-expanded="false">
+        Menu
+      </button>
+
+      <nav id="nav" class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#testing">Testing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <div class="hero-card">
+        <p class="kicker">CS67 Web Technologies</p>
+        <h1>Web Evidence Hub</h1>
+        <p class="lead">
+          A clean, light portfolio designed for fast assessment review with searchable evidence and accordion details.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#evidence">Explore Evidence</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <div class="card-head">
+        <h2>About</h2>
+        <p class="muted">Short overview of the website purpose.</p>
+      </div>
+      <p>
+        This portfolio presents coursework evidence for CS67 Web Technologies. It focuses on semantic structure, responsive layout,
+        and JavaScript-driven interaction to support assessment and viva discussion.
+      </p>
+    </section>
+
+    <section id="skills" class="card">
+      <div class="card-head">
+        <h2>Skills</h2>
+        <p class="muted">Core areas demonstrated in the portfolio.</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Semantic HTML</span>
+        <span class="chip">Responsive CSS</span>
+        <span class="chip">JavaScript DOM</span>
+        <span class="chip">Validation</span>
+        <span class="chip">UX Navigation</span>
+      </div>
+    </section>
+
+    <section id="evidence" class="card">
+      <div class="card-head">
+        <h2>Evidence (Search + Accordion)</h2>
+        <p class="muted">Type to filter project cards. Click a card to expand details.</p>
+      </div>
+
+      <label class="sr-only" for="search">Search evidence</label>
+      <input id="search" class="search" type="search" placeholder="Search evidence (e.g., HTML, CSS, validation, UX)..." />
+
+      <div id="cards" class="grid">
+        <!-- Card 1 -->
+        <article class="panel" data-tags="html semantic structure unit1 accessibility">
+          <button class="accordion" type="button" aria-expanded="false">
+            <span>
+              <strong>Evidence 1: Semantic HTML Structure</strong>
+              <span class="muted small">Unit 1 + Unit 5</span>
+            </span>
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Demonstrates semantic layout using header, nav, main, sections, and footer. Content is structured using
+              headings and labels to support accessibility and assessment clarity.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="panel" data-tags="css responsive layout unit5 unit8 design">
+          <button class="accordion" type="button" aria-expanded="false">
+            <span>
+              <strong>Evidence 2: Responsive Layout & Visual Design</strong>
+              <span class="muted small">Unit 5 + Unit 8</span>
+            </span>
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Demonstrates responsive design using a light theme, flexible grids, readable spacing, and mobile-friendly navigation.
+              Visual hierarchy is created through consistent cards and typography.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="panel" data-tags="javascript dom unit7 ux unit10 interaction">
+          <button class="accordion" type="button" aria-expanded="false">
+            <span>
+              <strong>Evidence 3: JavaScript Interaction (Filter + Accordion)</strong>
+              <span class="muted small">Unit 7 + Unit 10</span>
+            </span>
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Demonstrates DOM manipulation by filtering evidence cards from the search field and toggling accordion details
+              with accessible controls and user-friendly behaviour.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="panel" data-tags="validation security unit9 form input">
+          <button class="accordion" type="button" aria-expanded="false">
+            <span>
+              <strong>Evidence 4: Form Validation & Input Handling</strong>
+              <span class="muted small">Unit 9</span>
+            </span>
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div class="content" hidden>
+            <p>
+              Demonstrates client-side validation for name, email, and message fields with clear error feedback.
+              This supports usability and input-handling awareness.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <p id="noResults" class="muted" hidden>No matching evidence found. Try a different keyword.</p>
+    </section>
+
+    <section id="testing" class="card">
+      <div class="card-head">
+        <h2>Testing Summary</h2>
+        <p class="muted">Key checks performed (full log in Testing file).</p>
+      </div>
+      <ul class="list">
+        <li>Search filter returns correct cards</li>
+        <li>Accordion expands/collapses correctly</li>
+        <li>Mobile menu opens/closes correctly</li>
+        <li>Form validation shows accurate messages</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <div class="card-head">
+        <h2>Contact (Validation Demo)</h2>
+        <p class="muted">Coursework demonstration only.</p>
+      </div>
+
+      <form id="form" class="form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" autocomplete="name" />
+          <small class="err" id="nameErr"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="email" />
+          <small class="err" id="emailErr"></small>
+        </div>
+
+        <div class="field">
+          <label for="msg">Message</label>
+          <textarea id="msg" rows="5"></textarea>
+          <small class="err" id="msgErr"></small>
+        </div>
+
+        <button class="btn primary" type="submit">Validate</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p class="muted">© Sanjana — CS67 Web Technologies</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
